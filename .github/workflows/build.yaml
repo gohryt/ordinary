@@ -20,6 +20,7 @@ env:
   CARGO_NET_GIT_FETCH_WITH_CLI: true
   RUST_BACKTRACE: short
   LINUX_SYSTEM_DEPENDENCIES: >-
+    mold
     pkg-config
     libfontconfig-dev
     libwayland-dev
