@@ -1,0 +1,30 @@
+[workspace]
+resolver = "2"
+members = ["crates/bar", "crates/launcher", "crates/ipc", "crates/ipc-hyprland", "crates/ipc-niri", "crates/ipc-river", "crates/ipc-zbus", "crates/system", "crates/theme", "crates/xembed-bridge"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+
+[workspace.dependencies]
+gpui = { git = "https://github.com/zed-industries/zed", package = "gpui", branch = "main", default-features = false, features = ["wayland"] }
+gpui_platform = { git = "https://github.com/zed-industries/zed", package = "gpui_platform", branch = "main", default-features = false, features = ["wayland"] }
+
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+smol = "2"
+log = "0.4"
+anyhow = "1"
+libc = "0.2"
+zbus = "5"
+async-io = "2"
+env_logger = "0.11"
+futures-lite = "2"
+shell-words = "1.1"
+clap = { version = "4", features = ["derive"] }
+unicode-segmentation = "1.12"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

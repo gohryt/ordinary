@@ -1,0 +1,18 @@
+[package]
+name = "xembed-bridge"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+x11rb = { version = "0.13", features = ["allow-unsafe-code", "composite", "damage", "xtest"] }
+zbus.workspace = true
+smol.workspace = true
+log.workspace = true
+anyhow.workspace = true
+env_logger.workspace = true
+futures-lite.workspace = true
+libc.workspace = true
+
+[[bin]]
+name = "xembed-bridge"
+path = "xembed-bridge.rs"

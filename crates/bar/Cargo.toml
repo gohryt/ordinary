@@ -1,0 +1,22 @@
+[package]
+name = "ordinary-bar"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+env_logger.workspace = true
+clap.workspace = true
+gpui.workspace = true
+gpui_platform.workspace = true
+log.workspace = true
+ipc = { path = "../ipc" }
+ipc-hyprland = { path = "../ipc-hyprland" }
+ipc-niri = { path = "../ipc-niri" }
+ipc-river = { path = "../ipc-river" }
+ipc-zbus = { path = "../ipc-zbus" }
+ordinary-system = { path = "../system" }
+ordinary-theme = { path = "../theme" }
+
+[[bin]]
+name = "bar"
+path = "bar.rs"

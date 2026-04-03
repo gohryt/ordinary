@@ -1,0 +1,10 @@
+[package]
+name = "ordinary-system"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+path = "system.rs"
+
+[dependencies]
+libc.workspace = true

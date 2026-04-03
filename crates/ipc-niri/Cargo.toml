@@ -1,0 +1,18 @@
+[package]
+name = "ipc-niri"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+path = "niri.rs"
+
+[dependencies]
+async-io.workspace = true
+gpui.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+smol.workspace = true
+log.workspace = true
+anyhow.workspace = true
+shell-words.workspace = true
+ipc = { path = "../ipc" }

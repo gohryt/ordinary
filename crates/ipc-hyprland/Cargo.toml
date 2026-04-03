@@ -1,0 +1,17 @@
+[package]
+name = "ipc-hyprland"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+path = "hyprland.rs"
+
+[dependencies]
+async-io.workspace = true
+gpui.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+smol.workspace = true
+log.workspace = true
+anyhow.workspace = true
+ipc = { path = "../ipc" }

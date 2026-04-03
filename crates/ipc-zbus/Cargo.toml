@@ -1,0 +1,19 @@
+[package]
+name = "ipc-zbus"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+path = "zbus.rs"
+
+[dependencies]
+gpui.workspace = true
+zbus.workspace = true
+smol.workspace = true
+log.workspace = true
+anyhow.workspace = true
+futures-lite.workspace = true
+png = "0.17"
+ordinary-theme = { path = "../theme" }
+libc.workspace = true
+ipc = { path = "../ipc" }

@@ -1,0 +1,10 @@
+[package]
+name = "ipc"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+path = "ipc.rs"
+
+[dependencies]
+gpui.workspace = true

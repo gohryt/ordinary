@@ -1,0 +1,25 @@
+[package]
+name = "ordinary-launcher"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+async-io.workspace = true
+env_logger.workspace = true
+clap.workspace = true
+gpui.workspace = true
+gpui_platform.workspace = true
+log.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+shell-words.workspace = true
+unicode-segmentation.workspace = true
+ipc = { path = "../ipc" }
+ipc-hyprland = { path = "../ipc-hyprland" }
+ipc-niri = { path = "../ipc-niri" }
+ipc-river = { path = "../ipc-river" }
+ordinary-theme = { path = "../theme" }
+
+[[bin]]
+name = "launcher"
+path = "launcher.rs"
